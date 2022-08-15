@@ -1,2 +1,2 @@
 # DataStructuresAndAlgorithms
-DSA (IMPLEMENTATION) IN C++ & JAVA
+DSA (IMPLEMENTATION) IN C++ 
