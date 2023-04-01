@@ -11,13 +11,12 @@ int main(){
     cin>>n>>m;
 
     int adj[n+1][m+1];
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++){ 
+        cout<<"enter the edges from nodes"<<endl;
         int u,v;
         cin>>u>>v;
         adj[u][v]=1;
         adj[v][u]=1;
-        
-
     }
 
 
@@ -25,7 +24,12 @@ int main(){
     // ->matrix(2d array)             
     // ->list(double linkedlist)
 
-
+for(int i=0;i<m;i++){
+    for(int j=0;j<n;j++){
+        cout<<adj[i][j]<<" ";
+    }
+    cout<<endl;
+}
 
     return 0;
 }
