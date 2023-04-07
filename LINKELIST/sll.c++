@@ -56,6 +56,55 @@ public:
     }
 };
 
+void insertAtHead(Node* &head,int d){
+
+    Node *newnode=new Node(d);
+    newnode->next=head;
+    head=newnode;
+
+
+}
+
+void insertAtPosition(Node *head,int data){
+    int pos;
+    cout<<"Enter position "<<endl;
+    cin>>pos;
+
+    int cnt=1;
+
+    Node* temp=head;
+    while(cnt<pos-1){
+        temp=temp->next;
+        cnt++;
+    }
+
+Node* newnode=new Node(data);
+newnode->next=temp->next;
+temp->next=newnode;
+
+
+
+}
+
+void insertAtEnd(Node* &head,int data){
+Node *endnode=new Node(data);
+Node *temp=head;
+while(temp->next!=NULL){
+temp=temp->next;
+}
+temp->next=endnode;
+}
+
+void print(Node* head){
+    Node* temp;
+    temp=head;
+    while(temp->next!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
+
+
 
 
 
@@ -65,5 +114,18 @@ int main()
     Node *node1 = new Node(10);
     cout << node1->data << endl;
     cout << node1->next << endl;
+    Node* head=node1;
+    insertAtHead(head,10);
+    insertAtHead(head,20);   
+    insertAtHead(head,30);   
+    insertAtHead(head,40);
+
+insertAtPosition(head,0);
+
+    insertAtEnd(head,50);
+    insertAtEnd(head,60);    
+    insertAtEnd(head,70);    
+    insertAtEnd(head,80);
+    print(head);
     return 0;
 }
